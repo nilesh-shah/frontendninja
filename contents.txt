@@ -142,3 +142,17 @@ http://giangnguyen.net/2014/02/16/coffeescript-fat-arrow-vs-thin-arrow/
 http://squarism.com/2012/08/10/coffeescript-fat-arrow/
 http://webapplog.com/understanding-fat-arrows-in-coffeescript/
 http://blog.paracode.com/2011/08/28/coffeescript-fat-arrows
+
+Tools:
+
+JSFiddle - must have tool
+http://jsfiddle.net/#
+
+Github
+https://github.com
+
+Gist
+https://gist.github.com
+
+Developer Tools
+Mozilla Firefox, Google Chrome, Internet Explorer
