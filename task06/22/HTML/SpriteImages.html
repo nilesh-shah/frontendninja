@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+	  <meta charset="UTF-8">
+	  <title>Task06 - With Sprite changes</title>	 
+	  <style>
+		.social-share {
+			width: 80px;
+			max-height: 50px;
+			height: 50px;
+		}
+		.item1 {
+			background:url('../Images/social-buttons.png') no-repeat;
+			height: 20px;
+			width: 60px;
+			position: absolute;
+			background-position: 0px -86px;
+		}	
+		.item2{
+			background:url('../Images/social-buttons.png') no-repeat;
+			height: 20px;
+			width: 60px;
+			position: absolute;
+			background-position: 0px -45px;
+		}	
+		.item3{
+			background:url('../Images/social-buttons.png') no-repeat;
+			height: 20px;
+			width: 60px;
+			position: absolute;
+			background-position: 0px -66px;
+		}		
+		p {
+			font-family: Arial;
+			font-size: 17px;
+		}
+		
+	  </style
+	</head>
+	<body>
+		<h1>With Sprite changes</h1>
+		<p>
+			This is demo for Sprited images
+		</p>
+		<div class="social-share">
+			<a title="email" href='#' class="item1">				
+			</a>			
+		</div>
+		<div class="social-share">
+		<a title="Tweet" href='#' class="item2">				
+			</a>
+		</div>
+		<div class="social-share">
+			<a title="Tweet" href='#' class="item3">				
+				</a>
+		</div>
+		
+		<p>
+			Below is the sprite image
+		</p>
+		<div class="social-share">
+			<img src="../Images/social-buttons.png">
+		</div>
+		
+		<p style="margin-top:100px">
+			<strong>Answers to the questions asked</strong>
+		</p>
+		<p>
+			<strong>What are sprites and why would use them?</strong>
+			<br>
+			<strong>Answer:</strong> The sprites are collection of logically separate images into a single big image (mostly vertical). <br>
+			The advantages are <br>
+				1) Reduced HTTP requests <br>
+				2) You can compress the single image and hence total downloaded bytes would be reduced compared to multiple images <br>
+				3) Overall it improves page load time <br>
+				4) Easy maintenance, you don't need to maintain individual images.	<br>			
+		</p>
+		<p>
+			<strong>How do you go about creating them?</strong>
+			<br>
+			<strong>Answer:</strong> There are tools available to do that <br>
+			
+			1) Professional graphic designers can create it using Photoshop <br>
+			2) If we already have HTML page with #No of background images, there are tools like <a href="http://spriteme.org" target="_blank"> SpriteMe </a>which can create sprite image for you. It can also create necessary CSS with classes which describes background positions for individual images <br>
+			3) We can use CSS frameworks like <a href="http://compass-style.org/" target="_blank"> Compass </a> which has inbuilt features of Spriting. They have commands by which we can generate sprint images, sprite image based classes and inject in CSS <br>
+		</p>
+		<p>
+			<strong>What are possible alternatives to sprites?</strong>
+			<br>
+			<strong>Answer:</strong> I know only one alternative for now, which is using data URIs in CSS.
+		</p>
+	</body>
+</html>

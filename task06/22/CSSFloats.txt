@@ -1,0 +1,3 @@
+Created the example to showcase floated properties on JSFiddle and code can be referred there.
+
+http://jsfiddle.net/42M8v/6/
