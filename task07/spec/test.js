@@ -17,7 +17,7 @@ describe("A suite", function() {
 
 describe("Counter checks", function() {
   	it("Counter exists", function() {
-    	expect(Counter ).not.toBe(undefined);
+    	expect(Counter).not.toBe(undefined);
   	});
 
   	it("Counter is not global object", function() {

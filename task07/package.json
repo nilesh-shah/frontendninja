@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tushardemo/frontendninja"
+    "url": "https://github.com/nilesh-shah/frontendninja"
   },
   "keywords": [
     "modules"
   ],
-  "author": "Tushar Joshi",
+  "author": "Nilesh Shah",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tushardemo/frontendninja/issues"
+    "url": "https://github.com/nilesh-shah/frontendninja/issues"
   },
-  "homepage": "https://github.com/tushardemo/frontendninja",
+  "homepage": "https://github.com/nilesh-shah/frontendninja",
   "devDependencies": {
     "gulp": "^3.8.6",
     "gulp-jasmine": "^0.3.0"
