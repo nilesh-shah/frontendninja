@@ -1,5 +1,5 @@
 
-var Counter = (function () {	
+/*var Counter = (function () {	
 	var Counter = {}; // Object to be filled with other props and return it back
 	var	value = 0;
 
@@ -20,4 +20,33 @@ var Counter = (function () {
 	};	
 
 	return Counter;
+}());*/
+
+
+var Counter = (function () {	
+	var Counter = {}; // Object to be filled with other props and return it back
+	var	value = 0;
+	var getVal, incrementVal, resetVal;
+
+	function returnValue() {  // Private function of the Counter Module
+		return value;
+	}
+		
+	getVal = function () {
+		return returnValue();
+	};
+	incrementVal = function () {
+		value ++;
+		return returnValue();
+	};
+	resetVal = function () {
+		value = 0;
+		return returnValue();
+	};	
+
+	return {	
+		get: getVal,
+		increment: incrementVal,
+		reset: resetVal
+	};
 }());

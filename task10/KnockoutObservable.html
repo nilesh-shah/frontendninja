@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Knockout Observable</title>
+        <script type="text/javascript" src="/bower/bower_components/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="/bower/bower_components/knockout/dist/knockout.js"></script>
+
+        <script type="text/javascript">
+
+            var ViewModel = function () {
+                var self = this;
+
+                self.firstName = ko.observable("Nilesh");
+                self.lastName = ko.observable("Shah");
+                self.fullName = ko.computed({
+                    read: function () { return self.firstName() + " " + self.lastName(); },
+
+                    write: function (value) {
+                        var fullName = value.split(' ');
+                        self.firstName(fullName[0]);
+                        self.lastName(fullName[1]);
+                    }
+                });
+
+            };
+
+            var ObservableArrayModel = function (items) {
+                this.items = ko.observableArray(items);
+                this.itemToAdd = ko.observable('');
+                this.addItem = function () {
+                    if (this.itemToAdd() != "")
+                    {
+                        this.items.push(this.itemToAdd()); 
+                        this.itemToAdd('');
+                    }
+                }.bind(this);  // Ensure that "this" is always this view model
+            };
+
+            $(document).ready(function () {
+                // Apply the bindings here, ensure that element id is given to ensure that you can bind multiple ViewModels for single view
+                ko.applyBindings(new ViewModel(), document.getElementById('div1'));
+                ko.applyBindings(new ObservableArrayModel(["One", "Two", "Three"]), document.getElementById('frm1'));
+            });
+
+        </script>
+    </head>
+<body>
+
+    <div id="div1">
+        <input type="text" data-bind="value: firstName" />
+        <input type="text" data-bind="value: lastName" />
+        <h1 data-bind="text: fullName"></h1>
+    </div>
+    <form data-bind="submit: addItem" id="frm1">
+        Add item:
+        <input data-bind='value: itemToAdd' />
+        <button type="submit" data-bind="enable: true">Add</button>
+        <p>Added items:</p>
+        <select multiple="multiple" data-bind="options: items" style="width:100px"> </select>
+    </form>
+</body>
+</html>
